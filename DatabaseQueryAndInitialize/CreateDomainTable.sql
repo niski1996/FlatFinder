@@ -1,6 +1,0 @@
-CREATE TABLE Domain (
-	DomainID INT,
-	Domain VARCHAR(20),
-	Accepted INT NOT NULL DEFAULT 0,
-	Rejected INT NOT NULL DEFAULT 0,
-	ParseFailed INT NOT NULL DEFAULT 0)

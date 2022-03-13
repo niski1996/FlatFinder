@@ -1,7 +1,0 @@
-CREATE TABLE  TheSession (
-	SessionID INT,
-	Accepted INT NOT NULL DEFAULT 0,
-	Rejected INT NOT NULL DEFAULT 0,
-	ParseFailed INT NOT NULL DEFAULT 0,
-	SessionDate DATE DEFAULT GETDATE(),
-	SearchAmount INT NOT NULL DEFAULT 0)
