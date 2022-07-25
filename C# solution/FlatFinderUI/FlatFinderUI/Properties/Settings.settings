@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="FlatFinderUI.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="EWWelcomeText" Type="System.String" Scope="User">
+      <Value Profile="(Default)">"Witaj w programie FindFlat, który pomaga znaleźć mieszkanie w określonej przez Ciebie okolicy. Aby wyszukiwać oferty w internecie musisz posiadać dostęp do internetu. Wyniki zaisywane są lokalnie na dysku, więc można je przęglądać również w trybie offline"</Value>
+    </Setting>
+    <Setting Name="EWSearch" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Szukaj</Value>
+    </Setting>
+    <Setting Name="EWCheckSaved" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Zobacz zapisane</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

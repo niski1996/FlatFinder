@@ -1,0 +1,20 @@
+Użytkownicy:
+	-potwierdzona rejstracja za pomoca weryfikacji emeilowej
+	-szyfrowane hasła
+	-konto admina
+	-tworzenie/usuwanie kont
+	-zmiana danych adresowych
+Funkcjonalności
+	-filtry mieszkań
+	-filtr odległości
+	-sprawdza czy było na podstawie hashu
+	-tworzy listę aktualnych mieszkań w centrum zainteresowania
+	-dodawanie mieszkania na sztywno po url
+	-usuwanie mieszkań
+	-kontrola wystąpień:
+		-siła hasha(ile elementów powtórzonych)
+		-"na pewno nowe hashe"
+		-"wygaśnięcie"
+Techniczne
+	-implementacja na androida
+	-działanie jako service
