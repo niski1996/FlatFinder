@@ -1,10 +1,12 @@
-﻿using System;
+﻿using Core.Common.Contracts;
+using Core.Common.Core;
+using System;
 using System.Runtime.Serialization;
 
 namespace FlatFuck.Buisness.Entities
 {
 	[DataContract]
-	class SeedPoint
+	class SeedPoint : EntityBase, IIdentifiableEntity
 	{
 		[DataMember]
 		public int Id { get; set; }
@@ -22,6 +24,11 @@ namespace FlatFuck.Buisness.Entities
 		public string Longitude { get; set; }
 		[DataMember]
 		public string Latitiude { get; set; }
+		public int EntityId
+		{
+			get { return Id; }
+			set { Id = value; }
+		}
 
 	}
 }

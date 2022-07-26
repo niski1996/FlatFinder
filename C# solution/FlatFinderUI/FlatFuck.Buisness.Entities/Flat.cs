@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Core.Common.Contracts;
+using Core.Common.Core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -8,7 +10,7 @@ using System.Threading.Tasks;
 namespace FlatFuck.Buisness.Entities
 {
 	[DataContract]
-	class Flat
+	class Flat: EntityBase, IIdentifiableEntity
 	{
 		[DataMember]
 		public int Id { get; set; }
@@ -32,6 +34,11 @@ namespace FlatFuck.Buisness.Entities
 		public int SeedPointId { get; set; }
 		[DataMember]
 		public float Distance { get; set; }
+		public int EntityId
+		{
+			get { return Id; }
+			set { Id = value; }
+		}
 
 	}
 }
