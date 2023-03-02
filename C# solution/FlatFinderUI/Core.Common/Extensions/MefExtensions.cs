@@ -63,7 +63,7 @@ namespace Core.Common.Extensions
                     }
                 }
             }
-            return default(T);
+            return default;
         }
 
         public static T GetExportedValueByType<T>(this CompositionContainer container, string type)
@@ -76,7 +76,7 @@ namespace Core.Common.Extensions
                         return (T)PartDef.CreatePart().GetExportedValue(ExportDef);
                 }
             }
-            return default(T);
+            return default;
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FlatFuck.Client.Entities
+namespace FlatFinder.Client.Entities
 {
 	class SessionInDomain
 	{
@@ -57,6 +57,5 @@ namespace FlatFuck.Client.Entities
 			get { return _repated; }
 			set { _repated = value; }
 		}
-> 
 	}
 }

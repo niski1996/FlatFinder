@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FlatFuck.Client.Entities
+namespace FlatFinder.Client.Entities
 {
 	class Session
 	{

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FlatFuck.Client.Entities
+namespace FlatFinder.Client.Entities
 {
 	class Flat
 	{

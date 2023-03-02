@@ -10,7 +10,7 @@ namespace Core.Common.Tests
     public class ObjectBaseTests
     {
         [TestMethod]
-        public void test_clean_property_change()
+        public void Test_clean_property_change()
         {
             TestClass objTest = new TestClass();
             bool propertyChanged = false;
@@ -27,7 +27,7 @@ namespace Core.Common.Tests
         }
 
         [TestMethod]
-        public void test_dirty_set()
+        public void Test_dirty_set()
         {
             TestClass objTest = new TestClass();
 
@@ -39,7 +39,7 @@ namespace Core.Common.Tests
         }
 
         [TestMethod]
-        public void test_property_change_single_subscription()
+        public void Test_property_change_single_subscription()
         {
             TestClass objTest = new TestClass();
             int changeCounter = 0;
@@ -58,7 +58,7 @@ namespace Core.Common.Tests
         }
 
         [TestMethod]
-        public void test_child_dirty_tracking()
+        public void Test_child_dirty_tracking()
         {
             TestClass objTest = new TestClass();
 
@@ -74,7 +74,7 @@ namespace Core.Common.Tests
         }
 
         [TestMethod]
-        public void test_dirty_object_aggregating()
+        public void Test_dirty_object_aggregating()
         {
             TestClass objTest = new TestClass();
 
@@ -99,7 +99,7 @@ namespace Core.Common.Tests
         }
 
         [TestMethod]
-        public void test_object_validation()
+        public void Test_object_validation()
         {
             TestClass objTest = new TestClass();
 

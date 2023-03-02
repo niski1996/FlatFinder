@@ -3,7 +3,7 @@ using Core.Common.Core;
 using System;
 using System.Runtime.Serialization;
 
-namespace FlatFuck.Buisness.Entities
+namespace FlatFinder.Buisness.Entities
 {
 	[DataContract]
 	class SeedPoint : EntityBase, IIdentifiableEntity
