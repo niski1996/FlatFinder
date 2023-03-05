@@ -7,7 +7,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FlatFinder.Buisness.Entities
+namespace FlatFinder.Business.Entities
 {
     [DataContract]
     public class Account : EntityBase, IIdentifiableEntity

@@ -45,7 +45,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account.cs" />
     <Compile Include="Announcement.cs" />
+    <Compile Include="Announcer.cs" />
     <Compile Include="Domain.cs" />
     <Compile Include="Flat.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

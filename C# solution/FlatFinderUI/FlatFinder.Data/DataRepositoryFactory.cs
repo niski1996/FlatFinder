@@ -5,7 +5,7 @@ using System.Linq;
 using Core.Common.Contracts;
 using Core.Common.Core;
 
-namespace CarRental.Data
+namespace FlatFinder.Data
 {
     [Export(typeof(IDataRepositoryFactory))]
     [PartCreationPolicy(CreationPolicy.NonShared)]

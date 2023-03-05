@@ -6,11 +6,11 @@ using System.Runtime.Serialization;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("FlatFinder.Buisness.Entities")]
+[assembly: AssemblyTitle("FlatFinder.Business.Entities")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("HP Inc.")]
-[assembly: AssemblyProduct("FlatFinder.Buisness.Entities")]
+[assembly: AssemblyProduct("FlatFinder.Business.Entities")]
 [assembly: AssemblyCopyright("Copyright © HP Inc. 2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -36,4 +36,4 @@ using System.Runtime.Serialization;
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
 [assembly: ContractNamespace("dupaEntities",
-                              ClrNamespace = "FlatFinder.Buisness.Entities")]
+                              ClrNamespace = "FlatFinder.Business.Entities")]

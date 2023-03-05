@@ -1,27 +1,22 @@
 ﻿using Core.Common.Contracts;
 using Core.Common.Core;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.Serialization;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FlatFinder.Business.Entities
 {
 	[DataContract]
-	public class Domain : EntityBase, IIdentifiableEntity
+	public class Announcer : EntityBase, IIdentifiableEntity
 	{
 		[DataMember]
-		public string Name { get; set; }
-		[DataMember]
 		public int Id { get; set; }
-		public int EntityId
+		public string Name { get; set; }
+        public bool Broker { get; set; }
+		public string PhoneNumber { get; set; }
+        public string Email { get; set; }
+        public int EntityId
 		{
 			get { return Id; }
 			set { Id = value; }
-
-
 		}
 	}
 }

@@ -6,7 +6,7 @@ using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Runtime.Serialization;
 using Core.Common.Contracts;
-using FlatFinder.Buisness.Entities;
+using FlatFinder.Business.Entities;
 
 namespace FlatFinder.Data
 {
@@ -25,7 +25,6 @@ namespace FlatFinder.Data
         public DbSet<Domain> DomainSet { get; set; }
 
         public DbSet<Flat> FlatSet { get; set; }
-        public DbSet<Flat> ReservationSet { get; set; }
         public DbSet<SeedPoint> SeedPointSet { get; set; }
         public DbSet<Session> SessionSet { get; set; }
         public DbSet<SessionInDomain> SessionInDomainSet { get; set; }
@@ -39,10 +38,11 @@ namespace FlatFinder.Data
             modelBuilder.Ignore<IIdentifiableEntity>();
 
             modelBuilder.Entity<Account>().HasKey<int>(e => e.AccountId).Ignore(e => e.EntityId);
-            modelBuilder.Entity<Car>().HasKey<int>(e => e.CarId).Ignore(e => e.EntityId);
-            modelBuilder.Entity<Rental>().HasKey<int>(e => e.RentalId).Ignore(e => e.EntityId);
-            modelBuilder.Entity<Reservation>().HasKey<int>(e => e.ReservationId).Ignore(e => e.EntityId);
-            modelBuilder.Entity<Car>().Ignore(e => e.CurrentlyRented);
+            modelBuilder.Entity<Announcement>().HasKey<int>(e => e.Id).Ignore(e => e.EntityId);
+            modelBuilder.Entity<Flat>().HasKey<int>(e => e.Id).Ignore(e => e.EntityId);
+            modelBuilder.Entity<SeedPoint>().HasKey<int>(e => e.Id).Ignore(e => e.EntityId);
+            modelBuilder.Entity<Session>().Ignore(e => e.Id);
+            modelBuilder.Entity<SessionInDomain>().Ignore(e => e.Id);
         }
     }
 }

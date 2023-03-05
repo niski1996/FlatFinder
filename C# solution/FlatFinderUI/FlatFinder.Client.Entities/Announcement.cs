@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FlatFinder.Client.Entities
 {
-    class Announcment : ObjectBase
+    class Announcement : ObjectBase
     {
         private int _id;
         public int Id
@@ -79,8 +79,8 @@ namespace FlatFinder.Client.Entities
             }
         }
 
-        private string _announcer;
-        public string Announcer
+        private Announcer _announcer;
+        public Announcer Announcer
         {
             get { return _announcer; }
             set

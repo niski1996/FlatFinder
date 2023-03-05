@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel.Composition.Hosting;
 using System.Linq;
-using CarRental.Data;
+using FlatFinder.Data;
 
-namespace CarRental.Business.Bootstrapper
+namespace FlatFinder.Business.Bootstrapper
 {
     public static class MEFLoader
     {

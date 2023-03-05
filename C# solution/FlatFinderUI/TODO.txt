@@ -1,0 +1,1 @@
+zmodyfikowaæ podstawowe operacje CRUD na generyczne

@@ -7,7 +7,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FlatFinder.Buisness.Entities
+namespace FlatFinder.Business.Entities
 {
 	[DataContract]
 	public class Announcement: EntityBase, IIdentifiableEntity
@@ -24,7 +24,7 @@ namespace FlatFinder.Buisness.Entities
 		[DataMember]
 		public string PhoneNumber { get; set; }
 		[DataMember]
-		public string Announcer { get; set; }
+		public Announcer Announcer { get; set; }
 		[DataMember]
 		public DateTime AnnounceDate { get; set; }
         public int EntityId
