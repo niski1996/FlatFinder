@@ -6,8 +6,8 @@
     <ProjectGuid>{618C60FF-6322-471B-AED4-E4CBA3C3B216}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CarRental.Data.Tests</RootNamespace>
-    <AssemblyName>CarRental.Data.Tests</AssemblyName>
+    <RootNamespace>FlatFinder.Data.Tests</RootNamespace>
+    <AssemblyName>FlatFinder.Data.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -75,21 +75,21 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CarRental.Business.Bootstrapper\CarRental.Business.Bootstrapper.csproj">
+    <ProjectReference Include="..\FlatFinder.Buisness.Entities\FlatFinder.Buisness.Entities.csproj">
+      <Project>{21bb0e06-f309-4b90-90c0-171ff6f1b5b2}</Project>
+      <Name>FlatFinder.Buisness.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FlatFinder.Business.Bootstrapper\FlatFinder.Business.Bootstrapper.csproj">
       <Project>{9d1687b7-accb-48ba-9662-ed1095fbee84}</Project>
-      <Name>CarRental.Business.Bootstrapper</Name>
+      <Name>FlatFinder.Business.Bootstrapper</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CarRental.Business.Entities\CarRental.Business.Entities.csproj">
-      <Project>{9e12553b-d554-4eed-b29c-716632a52caf}</Project>
-      <Name>CarRental.Business.Entities</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CarRental.Data.Contracts\CarRental.Data.Contracts.csproj">
+    <ProjectReference Include="..\FlatFinder.Data.Contracts\FlatFinder.Data.Contracts.csproj">
       <Project>{f938d48c-fdf4-4b16-87a9-60d8fcebce72}</Project>
-      <Name>CarRental.Data.Contracts</Name>
+      <Name>FlatFinder.Data.Contracts</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CarRental.Data\CarRental.Data.csproj">
+    <ProjectReference Include="..\FlatFinder.Data\FlatFinder.Data.csproj">
       <Project>{10020c50-0f7d-4eb5-b894-102e53fc61ce}</Project>
-      <Name>CarRental.Data</Name>
+      <Name>FlatFinder.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\Core.Common.Contracts\Core.Common.Contracts.csproj">
       <Project>{5f9b5530-f150-4bf0-9d07-0ad8a4c6ef7d}</Project>

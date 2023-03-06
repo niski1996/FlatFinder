@@ -52,7 +52,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data Repositories\AnnouncementAnnouncementRepository.cs" />
     <Compile Include="Data Repositories\DomainRepository.cs" />
+    <Compile Include="Data Repositories\FlatRepository.cs" />
     <Compile Include="Data Repositories\SessionRepository.cs" />
     <Compile Include="FlatFinderContext.cs" />
     <Compile Include="DataRepositoryBase.cs" />

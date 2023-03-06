@@ -7,8 +7,8 @@
     <ProjectGuid>{9D1687B7-ACCB-48BA-9662-ED1095FBEE84}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CarRental.Business.Bootstrapper</RootNamespace>
-    <AssemblyName>CarRental.Business.Bootstrapper</AssemblyName>
+    <RootNamespace>FlatFinder.Business.Bootstrapper</RootNamespace>
+    <AssemblyName>FlatFinder.Business.Bootstrapper</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>

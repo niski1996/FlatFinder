@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
-using CarRental.Business.Bootstrapper;
-using CarRental.Business.Entities;
-using CarRental.Data.Contracts;
+using FlatFinder.Business.Bootstrapper;
+using FlatFinder.Business.Entities;
+using FlatFinder.Data.Contracts;
 using Core.Common.Contracts;
 using Core.Common.Core;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 
-namespace CarRental.Data.Tests
+namespace FlatFinder.Data.Tests
 {
     [TestClass]
     public class DataLayerTests
@@ -25,9 +25,9 @@ namespace CarRental.Data.Tests
         {
             RepositoryTestClass repositoryTest = new RepositoryTestClass();
 
-            IEnumerable<Car> cars = repositoryTest.GetCars();
+            IEnumerable<Flat> Flats = repositoryTest.GetFlats();
 
-            Assert.IsTrue(cars != null);
+            Assert.IsTrue(Flats != null);
         }
 
         [TestMethod]
@@ -35,69 +35,69 @@ namespace CarRental.Data.Tests
         {
             RepositoryFactoryTestClass factoryTest = new RepositoryFactoryTestClass();
 
-            IEnumerable<Car> cars = factoryTest.GetCars();
+            IEnumerable<Flat> Flats = factoryTest.GetFlats();
 
-            Assert.IsTrue(cars != null);
+            Assert.IsTrue(Flats != null);
         }
 
         [TestMethod]
         public void test_repository_mocking()
         {
-            List<Car> cars = new List<Car>()
+            List<Flat> Flats = new List<Flat>()
             {
-                new Car() { CarId = 1, Description = "Mustang" },
-                new Car() { CarId = 2, Description = "Corvette" }
+                new Flat() { Id = 1, ForSale = true},
+                new Flat() { Id = 2, ForSale = false }
             };
 
-            Mock<ICarRepository> mockCarRepository = new Mock<ICarRepository>();
-            mockCarRepository.Setup(obj => obj.Get()).Returns(cars);
+            Mock<IFlatRepository> mockFlatRepository = new Mock<IFlatRepository>();
+            mockFlatRepository.Setup(obj => obj.Get()).Returns(Flats);
 
-            RepositoryTestClass repositoryTest = new RepositoryTestClass(mockCarRepository.Object);
+            RepositoryTestClass repositoryTest = new RepositoryTestClass(mockFlatRepository.Object);
 
-            IEnumerable<Car> ret = repositoryTest.GetCars();
+            IEnumerable<Flat> ret = repositoryTest.GetFlats();
 
-            Assert.IsTrue(ret == cars);
+            Assert.IsTrue(ret == Flats);
         }
         
         [TestMethod]
         public void test_factory_mocking1()
         {
-            List<Car> cars = new List<Car>()
+            List<Flat> Flats = new List<Flat>()
             {
-                new Car() { CarId = 1, Description = "Mustang" },
-                new Car() { CarId = 2, Description = "Corvette" }
+                new Flat() { Id = 1, ForSale = true},
+                new Flat() { Id = 2, ForSale = false }
             };
 
             Mock<IDataRepositoryFactory> mockDataRepository = new Mock<IDataRepositoryFactory>();
-            mockDataRepository.Setup(obj => obj.GetDataRepository<ICarRepository>().Get()).Returns(cars);
+            mockDataRepository.Setup(obj => obj.GetDataRepository<IFlatRepository>().Get()).Returns(Flats);
 
             RepositoryFactoryTestClass factoryTest = new RepositoryFactoryTestClass(mockDataRepository.Object);
 
-            IEnumerable<Car> ret = factoryTest.GetCars();
+            IEnumerable<Flat> ret = factoryTest.GetFlats();
 
-            Assert.IsTrue(ret == cars);
+            Assert.IsTrue(ret == Flats);
         }
 
         [TestMethod]
         public void test_factory_mocking2()
         {
-            List<Car> cars = new List<Car>()
+            List<Flat> Flats = new List<Flat>()
             {
-                new Car() { CarId = 1, Description = "Mustang" },
-                new Car() { CarId = 2, Description = "Corvette" }
+                new Flat() { Id = 1, ForSale = true},
+                new Flat() { Id = 2, ForSale = false }
             };
 
-            Mock<ICarRepository> mockCarRepository = new Mock<ICarRepository>();
-            mockCarRepository.Setup(obj => obj.Get()).Returns(cars);
+            Mock<IFlatRepository> mockFlatRepository = new Mock<IFlatRepository>();
+            mockFlatRepository.Setup(obj => obj.Get()).Returns(Flats);
 
             Mock<IDataRepositoryFactory> mockDataRepository = new Mock<IDataRepositoryFactory>();
-            mockDataRepository.Setup(obj => obj.GetDataRepository<ICarRepository>()).Returns(mockCarRepository.Object);
+            mockDataRepository.Setup(obj => obj.GetDataRepository<IFlatRepository>()).Returns(mockFlatRepository.Object);
 
             RepositoryFactoryTestClass factoryTest = new RepositoryFactoryTestClass(mockDataRepository.Object);
 
-            IEnumerable<Car> ret = factoryTest.GetCars();
+            IEnumerable<Flat> ret = factoryTest.GetFlats();
 
-            Assert.IsTrue(ret == cars);
+            Assert.IsTrue(ret == Flats);
         }
     }
 
@@ -108,19 +108,19 @@ namespace CarRental.Data.Tests
             ObjectBase.Container.SatisfyImportsOnce(this);
         }
 
-        public RepositoryTestClass(ICarRepository carRepository)
+        public RepositoryTestClass(IFlatRepository FlatRepository)
         {
-            _CarRepository = carRepository;
+            _FlatRepository = FlatRepository;
         }
 
         [Import]
-        ICarRepository _CarRepository;
+        IFlatRepository _FlatRepository;
 
-        public IEnumerable<Car> GetCars()
+        public IEnumerable<Flat> GetFlats()
         {
-            IEnumerable<Car> cars = _CarRepository.Get();
+            IEnumerable<Flat> Flats = _FlatRepository.Get();
 
-            return cars;
+            return Flats;
         }
     }
 
@@ -139,13 +139,13 @@ namespace CarRental.Data.Tests
         [Import]
         IDataRepositoryFactory _DataRepositoryFactory;
 
-        public IEnumerable<Car> GetCars()
+        public IEnumerable<Flat> GetFlats()
         {
-            ICarRepository carRepository = _DataRepositoryFactory.GetDataRepository<ICarRepository>();
+            IFlatRepository FlatRepository = _DataRepositoryFactory.GetDataRepository<IFlatRepository>();
 
-            IEnumerable<Car> cars = carRepository.Get();
+            IEnumerable<Flat> Flats = FlatRepository.Get();
 
-            return cars;
+            return Flats;
         }
     }
 }

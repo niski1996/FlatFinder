@@ -9,8 +9,8 @@ namespace Core.Common.Tests
         string _CleanProp = string.Empty;
         string _DirtyProp = string.Empty;
         string _StringProp = string.Empty;
-        TestChild _Child = new TestChild();
-        TestChild _NotNavigableChild = new TestChild();
+        readonly TestChild _Child = new TestChild();
+        readonly TestChild _NotNavigableChild = new TestChild();
 
         public string CleanProp
         {
