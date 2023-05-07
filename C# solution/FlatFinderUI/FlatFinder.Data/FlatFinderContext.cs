@@ -41,8 +41,8 @@ namespace FlatFinder.Data
             modelBuilder.Entity<Announcement>().HasKey<int>(e => e.Id).Ignore(e => e.EntityId);
             modelBuilder.Entity<Flat>().HasKey<int>(e => e.Id).Ignore(e => e.EntityId);
             modelBuilder.Entity<SeedPoint>().HasKey<int>(e => e.Id).Ignore(e => e.EntityId);
-            modelBuilder.Entity<Session>().Ignore(e => e.Id);
-            modelBuilder.Entity<SessionInDomain>().Ignore(e => e.Id);
+            modelBuilder.Entity<Session>().HasKey<int>(e => e.Id).Ignore(e => e.EntityId);
+            modelBuilder.Entity<SessionInDomain>().HasKey<int>(e => e.Id).Ignore(e => e.EntityId);
         }
     }
 }

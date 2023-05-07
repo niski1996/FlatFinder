@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using FlatFinder.Business.Entities;
+using FlatFinder.Data;
 
 namespace FlatFinderUI
 {
@@ -14,9 +16,17 @@ namespace FlatFinderUI
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new EntryWindow());
+            //Application.EnableVisualStyles();
+            //Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new EntryWindow());
+            var tmp = new Flat();
+            var tmpRes = new FlatRepository();
+            tmpRes.Add(tmp);
+            Console.WriteLine("helo");
+            Console.Read();
+
+
+
         }
     }
 }

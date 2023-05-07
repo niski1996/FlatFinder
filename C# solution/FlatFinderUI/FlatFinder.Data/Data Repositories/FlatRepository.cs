@@ -53,6 +53,8 @@ namespace FlatFinder.Data
 
         protected override Flat AddEntity(FlatFinderContext entityContext, Flat entity)
         {
+            var tmp = entityContext.FlatSet.AsQueryable();
+            var s = tmp.ToString();
             return entityContext.FlatSet.Add(entity);
         }
 
